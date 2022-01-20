@@ -15,15 +15,19 @@ git clone --depth 1 --branch 4.5.2-openvino https://github.com/opencv/opencv.git
 
 cd opencv && mkdir build && cd build
 
-cmake –DCMAKE_BUILD_TYPE=Release –DCMAKE_INSTALL_PREFIX=/usr/local ..
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
 
 make -j4
 sudo make install
+
+cd ../../
 
 # install OpenVINO
 git clone --depth 1 --branch 2021.3 https://github.com/openvinotoolkit/openvino.git
 
 cd openvino
+
+git submodule update --init --recursive
 
 sh ./install_build_dependencies.sh
 

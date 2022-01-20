@@ -39,3 +39,8 @@ public
 *.jpg
 *.png
 *.bmp
+
+# dependencies
+opencv
+openvino
+
