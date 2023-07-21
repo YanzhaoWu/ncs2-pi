@@ -44,3 +44,9 @@ public
 opencv
 openvino
 
+# notebook
+.ipynb_checkpoints
+
+# models
+*.pt
+*.params
